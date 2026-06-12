@@ -1,0 +1,67 @@
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#050816;
+    overflow:hidden;
+    font-family:Arial,sans-serif;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:radial-gradient(circle,
+    rgba(0,212,255,.25),
+    transparent 70%);
+    filter:blur(50px);
+}
+
+.boot-screen{
+    text-align:center;
+    color:#00d4ff;
+    z-index:10;
+}
+
+.boot-screen h1{
+    font-size:32px;
+    letter-spacing:3px;
+}
+
+.boot-screen p{
+    color:#9ab8ff;
+}
+
+.progress{
+    width:350px;
+    height:12px;
+    background:#111;
+    border-radius:50px;
+    overflow:hidden;
+    margin:25px auto;
+}
+
+.progress-fill{
+    height:100%;
+    width:0;
+    background:linear-gradient(90deg,#00d4ff,#0066ff);
+    animation:load 3s forwards;
+}
+
+@keyframes load{
+    from{width:0;}
+    to{width:100%;}
+}
+
+.enter-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 40px;
+    border-radius:40px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#00d4ff,#0066ff);
+}
